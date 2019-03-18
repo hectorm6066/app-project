@@ -19,27 +19,16 @@
   <body>
     
     <div class="container-fluid">
-      <h1>Hello World!</h1>
-      <form method="post" action="/result">
-        <input type="text" name="input1"><br>
-        <input type="submit" value="Submit">
+      <h1>Welcome to my Trivia app</h1>
+      <form name = "Question">
+         <h3><%= @start.question %></h3>
+        <input type = "radio" name ="answer" value = "a"><%= @start.correct_answer %><br>
+      <input type = "radio" name ="answer" value = "b"><%= @start.incorrect_answers[0] %><br>
+      <input type = "radio" name ="answer" value = "c"><%= @start.incorrect_answers[2] %><br>
+      <input type = "radio" name ="answer" value = "d"><%= @start.incorrect_answers[1]%><br>
+      <input type="submit" value="submit">
       </form>
     </div>
-    <h1><%= "I love " + "Ruby!!" %></h1>
-    <%= 1 + 1 %>
-    <% if 1 == 2 %>
-    <p>1 equals 2.</p>
-  <% else %>
-    <p>1 does not equal 2.</p>
-  <% end %>
-  <% wall_posts = ["First post!", "Second post!", "Hello, it's your mother, why don't you ever call me?"] %>
-  <ul>
-<% wall_posts.each do |post| %>
-  <li><%= post %></li>
-<% end %>
-</ul>
-
-  
-  
+    
   </body>
 </html>
